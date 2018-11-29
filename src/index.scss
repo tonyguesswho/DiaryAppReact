@@ -13,12 +13,13 @@
 */
 
 html,
-body {
+.body {
   font-family: "Lato", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  height: 100vh;
 }
 .bg {
   background-color: #cfd4d4;
