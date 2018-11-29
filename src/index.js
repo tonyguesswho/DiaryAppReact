@@ -1,14 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import './index.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import Root from './root';
 
-class App extends React.Component{
-    render(){
-        return(
-            <div>Hello world</div>
-        )
-    }
-
-}
-
-export default App;
+ReactDOM.render(
+  <Root>
+    <App />
+  </Root>,
+  document.getElementById('app')
+);
