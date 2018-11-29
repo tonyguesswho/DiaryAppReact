@@ -1,0 +1,19 @@
+{
+  "name": "diaryappreact",
+  "version": "1.0.0",
+  "description": "A basic digital diary",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonyguesswho/DiaryAppReact.git"
+  },
+  "author": "Anthony ugwu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonyguesswho/DiaryAppReact/issues"
+  },
+  "homepage": "https://github.com/tonyguesswho/DiaryAppReact#readme"
+}
