@@ -10,7 +10,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve('dist'),
-    filename: 'bundled.js'
+    filename: 'bundled.js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -52,8 +53,15 @@ module.exports = {
             loader: 'sass-loader'
           }
         ]
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader'
       }
     ]
+  },
+  devServer: {
+    historyApiFallback: true
   },
   plugins: [htmlWebpackPlugin]
 };
