@@ -10,12 +10,12 @@ class Landing extends Component {
       <header id="main-header">
         <img src={logo} alt={'logo'} className="logo" />
         <Navbar />
-        <div class="home-text">
+        <div className="home-text">
           <h1>Personalized Digital Diary</h1>
-          <Link to="/addentry" class="btn btn-filled">
+          <Link to="/addentry" className="btn btn-filled">
             Write
           </Link>
-          <Link to="/entries" class="btn btn-transparent" id="myDiary">
+          <Link to="/entries" className="btn btn-transparent" id="myDiary">
             my Diary
           </Link>
         </div>

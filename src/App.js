@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-// import Navbar from './components/Navbar';
 import Landing from './components/Landing';
 import Signup from './containers/SignUp';
 import './index.scss';
