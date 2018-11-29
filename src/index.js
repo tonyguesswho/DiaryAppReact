@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
- require('./index.css');
+import './index.css';
 
 class App extends React.Component{
     render(){
@@ -11,4 +11,4 @@ class App extends React.Component{
 
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+export default App;

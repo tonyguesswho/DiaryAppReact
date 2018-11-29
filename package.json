@@ -5,7 +5,27 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open --hot"
+    "start": "webpack-dev-server --mode development --open --hot",
+    "test": "jest",
+    "test:watch": "jest --watch ",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "./src/setupTests.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "jest-static-stubs/$1",
+      "\\.(css|less|scss|png)$": "identity-obj-proxy"
+    },
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "html"
+    ]
   },
   "repository": {
     "type": "git",
@@ -22,12 +42,20 @@
     "react-dom": "^16.6.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.4",
     "css-loader": "^1.0.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "enzyme-to-json": "^3.3.4",
     "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
+    "jest-static-stubs": "0.0.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
