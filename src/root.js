@@ -6,9 +6,8 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 
 const enhancers = composeWithDevTools({});
-const state = { auth: { authenticated: localStorage.getItem('token') } };
 
-export default ({ children, initialState = { ...state } }) => {
+export default ({ children, initialState  }) => {
   const store = createStore(rootReducer, initialState, enhancers(applyMiddleware(thunk)));
   return <Provider store={store}>{children}</Provider>;
 };

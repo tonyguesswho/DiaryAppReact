@@ -1,6 +1,6 @@
 const initialState = {
-  authenticated: '',
-  errorMessage: ''
+  auth: { authenticated: localStorage.getItem('token')},
+  authError: ''
 };
 
 export default initialState;
