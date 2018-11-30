@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Landing from './components/Landing';
 import Signup from './containers/auth/SignUp';
-import Signin from './containers/auth/Signin';
+import Signin from './containers/auth/SignIn';
 import Profile from './containers/Profile';
 import authenticate from './hoc/authenticate';
 import './index.scss';
