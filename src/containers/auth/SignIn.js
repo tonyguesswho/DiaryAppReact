@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { signin } from '../../actions/authAction';
+import { signin, clearError } from '../../actions/authAction';
 
 class SignIn extends Component {
   constructor() {
@@ -10,6 +10,9 @@ class SignIn extends Component {
     this.state = {
       email: '',
       password: '',
+      loading:false,
+      error: '',
+      success: ''
     };
   }
 
@@ -20,15 +23,29 @@ class SignIn extends Component {
     e.preventDefault();
 
     const user = {
-      email: this.state.email,
-      password: this.state.password,
+      email: this.state.email.trim(),
+      password: this.state.password.trim(),
     };
 
     this.props.signin(user, this.props.history);
   }
+  componentDidMount = () => {
+    const { clearError } = this.props;
+    clearError();
+  };
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps) {
+      const { errorMessage } = nextProps;
+      this.setState({
+        error: errorMessage,
+        loading:false
+      });
+    }
+  }
 
   render() {
-    console.log(this.state, this.props);
+    const { loading, error } = this.state;
     return (
         <div className="bg body">
         <header className="header2">
@@ -46,6 +63,7 @@ class SignIn extends Component {
         <section className="signup" id="messageBox">
             <div className="bigboxy">
                 <div className="box span31 span3-center card">
+                {error && <div className="msg_output_fail">{error}</div>}
                     <h2>Sign In </h2>
                     <form onSubmit={this.onSubmit} id="login">
                         <div className="fullspan">
@@ -64,7 +82,7 @@ class SignIn extends Component {
                             Don't have an account
                             <Link to="/signup">Sign Up</Link>
                         </p>
-                        <input type="submit" value="Sign In"></input>
+                        {!loading ? <input type="submit" value="Sign In" /> : <input type="submit" value="Loading  . . ." disabled="disabled" />}
                     </form>
                 </div>
             </div>
@@ -74,9 +92,9 @@ class SignIn extends Component {
   }
 }
 
-const mapStateToProps = state => ({ message: state });
+const mapStateToProps = state => ({ errorMessage: state.auth.authError });
 
 export default connect(
   mapStateToProps,
-  { signin }
+  { signin, clearError }
 )(withRouter(SignIn));

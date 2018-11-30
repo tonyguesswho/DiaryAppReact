@@ -16,7 +16,7 @@ export const signup = (userDetails, history) => async dispatch => {
       text: "Signup Successful",
       icon: "success",
     });
-    history.push('/profile')
+     history.push('/profile')
   } catch (error) {
     dispatch({
       type: types.SIGNIN_USER_ERROR,
@@ -28,7 +28,6 @@ export const signup = (userDetails, history) => async dispatch => {
 export const signin = (userDetails, history) => async dispatch => {
   try {
     const response = await axios.post('https://mydiary-api.herokuapp.com/auth/login',userDetails);
-    console.log(response.data.token)
     dispatch({ type: types.SIGNIN_USER, payload: response.data.token });
     localStorage.setItem('token', response.data.token);
     history.push('/profile')
@@ -45,3 +44,6 @@ export const signout = () => {
 
   return { type: types.SIGNOUT_USER };
 };
+
+
+export const clearError = () => ({ type: types.CLEAR_ERROR });
