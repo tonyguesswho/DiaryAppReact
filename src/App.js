@@ -4,6 +4,7 @@ import Landing from './components/Landing';
 import Signup from './containers/auth/SignUp';
 import Signin from './containers/auth/Signin';
 import Profile from './containers/Profile';
+import authenticate from './hoc/authenticate';
 import './index.scss';
 
 class App extends React.Component {
@@ -14,7 +15,7 @@ class App extends React.Component {
           <Route exact path="/" component={Landing}/>
           <Route exact path="/signup" component={Signup}/>
           <Route exact path="/signin" component={Signin}/>
-          <Route exact path="/profile" component={Profile}/>
+          <Route exact path="/profile" component={authenticate(Profile)}/>
         </div>
       </BrowserRouter>
     );
