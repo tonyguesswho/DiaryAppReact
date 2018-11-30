@@ -1,33 +1,40 @@
 import axios from 'axios';
 import * as types from './actionTypes';
+import swal from 'sweetalert';
 
-export const signup = (formValues, callback) => async dispatch => {
+
+export const signup = (userDetails, history) => async dispatch => {
   try {
-    const res = await axios.post('/api/auth/signup', formValues);
+    const response = await axios.post('https://mydiary-api.herokuapp.com/auth/signup', userDetails);
     dispatch({
       type: types.SIGNIN_USER,
-      payload: res.data.token
+      payload: response.data.token
     });
-    localStorage.setItem('token', res.data.token);
-    callback();
+    localStorage.setItem('token', response.data.token);
+    swal({
+      title: "Welcome",
+      text: "Signup Successful",
+      icon: "success",
+    });
+     history.push('/profile')
   } catch (error) {
     dispatch({
       type: types.SIGNIN_USER_ERROR,
-      payload: error.response.data.message || error.response.data.error
+      payload: error.response.data.message
     });
   }
 };
 
-export const signin = (formValues, callback) => async dispatch => {
+export const signin = (userDetails, history) => async dispatch => {
   try {
-    const response = await axios.post('/api/auth/signin', formValues);
+    const response = await axios.post('https://mydiary-api.herokuapp.com/auth/login',userDetails);
     dispatch({ type: types.SIGNIN_USER, payload: response.data.token });
     localStorage.setItem('token', response.data.token);
-    callback();
+    history.push('/profile')
   } catch (error) {
     dispatch({
       type: types.SIGNIN_USER_ERROR,
-      payload: error.response.data.message || error.response.data.error
+      payload: error.response.data.message
     });
   }
 };
@@ -37,3 +44,6 @@ export const signout = () => {
 
   return { type: types.SIGNOUT_USER };
 };
+
+
+export const clearError = () => ({ type: types.CLEAR_ERROR });

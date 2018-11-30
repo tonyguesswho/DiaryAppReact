@@ -6,9 +6,11 @@ export default (state = initialState, action) => {
     case types.SIGNIN_USER:
       return { ...state, authenticated: action.payload };
     case types.SIGNIN_USER_ERROR:
-      return { ...state, errorMessage: action.payload };
+      return { ...state, authError: action.payload };
     case types.SIGNOUT_USER:
       return { ...state, authenticated: '' };
+      case types.CLEAR_ERROR:
+      return { ...state, authError: '' };
     default:
       return state;
   }
