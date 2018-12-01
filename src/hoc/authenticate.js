@@ -12,8 +12,8 @@ export default (ChildComponent) => {
     }
 
     checkAuthStatus() {
-      const { auth, history } = this.props;
-      if (!auth) {
+      const { profile, history } = this.props;
+      if (Object.keys(profile).length === 0 ) {
         history.push('/signin');
       }
     }
@@ -23,9 +23,7 @@ export default (ChildComponent) => {
     }
   }
 
-  function mapStateToProps(state) {
-    return { auth: state.auth.auth.authenticated };
-  }
+  const mapStateToProps = state => ({ profile: state.profile.userProfile });
 
   return connect(mapStateToProps)(Authenticate);
 };
