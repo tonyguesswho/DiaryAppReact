@@ -17,7 +17,7 @@ class Profile extends Component {
     const { profile } = this.props;
     this.setState({
       profile
-    })
+    });
   };
   render() {
     const { profile } = this.state;
@@ -44,12 +44,12 @@ class Profile extends Component {
               <h4>Total Number of Entries</h4>
               <p id="totalEntry" />
 
-              <a href="add_entry.html" className="ebtn ebtn-filled">
+              <Link to="/create" className="ebtn ebtn-filled">
                 Add Entry
-              </a>
-              <a href="entries.html" className="ebtn ebtn-transparent">
+              </Link>
+              <Link to="/entries" className="ebtn ebtn-transparent">
                 My Diary
-              </a>
+              </Link>
             </div>
           </div>
         </section>

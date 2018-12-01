@@ -3,7 +3,8 @@ const initialState = {
   authError: '',
   authSuccess: '',
   userProfile:{},
-  entries:[]
+  entries:[],
+  entryError:''
 };
 
 export default initialState;
