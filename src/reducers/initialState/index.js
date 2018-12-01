@@ -1,7 +1,9 @@
 const initialState = {
   auth: { authenticated: localStorage.getItem('token')},
   authError: '',
-  authSuccess: ''
+  authSuccess: '',
+  userProfile:{},
+  entries:[]
 };
 
 export default initialState;

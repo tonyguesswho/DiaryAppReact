@@ -1,7 +1,8 @@
 import axios from 'axios';
 import * as types from './actionTypes';
 import swal from 'sweetalert';
-
+import setToken from '../util/setToken';
+import decode from 'jwt-decode';
 
 export const signup = (userDetails, history) => async dispatch => {
   try {
@@ -12,11 +13,11 @@ export const signup = (userDetails, history) => async dispatch => {
     });
     localStorage.setItem('token', response.data.token);
     swal({
-      title: "Welcome",
-      text: "Signup Successful",
-      icon: "success",
+      title: 'Welcome',
+      text: 'Signup Successful',
+      icon: 'success'
     });
-     history.push('/profile')
+    history.push('/profile');
   } catch (error) {
     dispatch({
       type: types.SIGNIN_USER_ERROR,
@@ -27,10 +28,11 @@ export const signup = (userDetails, history) => async dispatch => {
 
 export const signin = (userDetails, history) => async dispatch => {
   try {
-    const response = await axios.post('https://mydiary-api.herokuapp.com/auth/login',userDetails);
-    dispatch({ type: types.SIGNIN_USER, payload: response.data.token });
+    const response = await axios.post('https://mydiary-api.herokuapp.com/auth/login', userDetails);
     localStorage.setItem('token', response.data.token);
-    history.push('/profile')
+    setToken(response.data.token);
+    dispatch({ type: types.SET_USER_PROFILE, payload:decode(localStorage.token)});
+    history.push('/profile');
   } catch (error) {
     dispatch({
       type: types.SIGNIN_USER_ERROR,
@@ -41,9 +43,7 @@ export const signin = (userDetails, history) => async dispatch => {
 
 export const signout = () => {
   localStorage.removeItem('token');
-
-  return { type: types.SIGNOUT_USER };
+  return { type: types.SIGNOUT_USER, payload: '' };
 };
-
 
 export const clearError = () => ({ type: types.CLEAR_ERROR });
