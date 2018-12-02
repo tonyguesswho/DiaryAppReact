@@ -1,0 +1,284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signup UI render features container should render as expected 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "key": "testKey",
+      },
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "testKey",
+          "pathname": "/",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <_default>
+      <Provider
+        store={
+          Object {
+            "dispatch": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+            Symbol(observable): [Function],
+          }
+        }
+      >
+        <Connect(withRouter(SignUp))>
+          <withRouter(SignUp)
+            clearError={[Function]}
+            errorMessage=""
+            signup={[Function]}
+          >
+            <Route>
+              <SignUp
+                clearError={[Function]}
+                errorMessage=""
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "canGo": [Function],
+                    "createHref": [Function],
+                    "entries": Array [
+                      Object {
+                        "hash": "",
+                        "key": "testKey",
+                        "pathname": "/",
+                        "search": "",
+                      },
+                    ],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "index": 0,
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "key": "testKey",
+                      "pathname": "/",
+                      "search": "",
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                location={
+                  Object {
+                    "hash": "",
+                    "key": "testKey",
+                    "pathname": "/",
+                    "search": "",
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+                signup={[Function]}
+              >
+                <div
+                  className="bg body"
+                >
+                  <header
+                    className="header2"
+                  >
+                    <nav>
+                      <ul
+                        className="nav nav2"
+                      >
+                        <li>
+                          <Link
+                            replace={false}
+                            to="/"
+                          >
+                            <a
+                              href="/"
+                              onClick={[Function]}
+                            >
+                              Home
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            replace={false}
+                            to="/signin"
+                          >
+                            <a
+                              href="/signin"
+                              onClick={[Function]}
+                            >
+                              Sign In
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </nav>
+                  </header>
+                  <section
+                    className="signup"
+                    id="messageBox"
+                  >
+                    <div
+                      className="box span31 span3-center card"
+                    >
+                      <h2>
+                        Sign Up 
+                      </h2>
+                      <form
+                        id="signUp"
+                        onSubmit={[Function]}
+                      >
+                        <div
+                          className="fullspan"
+                        >
+                          <label
+                            htmlFor="email"
+                          >
+                            Email:
+                          </label>
+                        </div>
+                        <div
+                          className="fullspan"
+                        >
+                          <input
+                            id="email"
+                            name="email"
+                            onChange={[Function]}
+                            placeholder="email"
+                            required={true}
+                            type="email"
+                          />
+                        </div>
+                        <div
+                          className="fullspan"
+                        >
+                          <label
+                            htmlFor="username"
+                          >
+                            username:
+                          </label>
+                        </div>
+                        <div
+                          className="fullspan"
+                        >
+                          <input
+                            id="username"
+                            name="username"
+                            onChange={[Function]}
+                            placeholder="username"
+                            required={true}
+                            type="text"
+                          />
+                        </div>
+                        <div
+                          className="fullspan"
+                        >
+                          <label
+                            htmlFor="password"
+                          >
+                            Password:
+                          </label>
+                        </div>
+                        <div
+                          className="fullspan"
+                        >
+                          <input
+                            id="password"
+                            name="password"
+                            onChange={[Function]}
+                            placeholder="password"
+                            required={true}
+                            type="password"
+                          />
+                        </div>
+                        <div
+                          className="fullspan"
+                        >
+                          <label
+                            htmlFor="cPassword"
+                          >
+                            Confirm Password:
+                          </label>
+                        </div>
+                        <div
+                          className="fullspan"
+                        >
+                          <input
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            onChange={[Function]}
+                            placeholder="Confirm password"
+                            required={true}
+                            type="password"
+                          />
+                        </div>
+                        <p
+                          className="signin-prompt"
+                        >
+                          Already have an account
+                          <Link
+                            replace={false}
+                            to="/signin"
+                          >
+                            <a
+                              href="/signin"
+                              onClick={[Function]}
+                            >
+                              Sign In
+                            </a>
+                          </Link>
+                        </p>
+                        <input
+                          type="submit"
+                          value="Sign Up"
+                        />
+                      </form>
+                    </div>
+                  </section>
+                </div>
+              </SignUp>
+            </Route>
+          </withRouter(SignUp)>
+        </Connect(withRouter(SignUp))>
+      </Provider>
+    </_default>
+  </Router>
+</MemoryRouter>
+`;

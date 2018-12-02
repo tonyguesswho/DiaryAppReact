@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing UI render features component should render as expected 1`] = `
+<header
+  id="main-header"
+>
+  <img
+    alt="logo"
+    className="logo"
+    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+  />
+  <Navbar />
+  <div
+    className="home-text"
+  >
+    <h1>
+      Personalized Digital Diary
+    </h1>
+    <Link
+      className="btn btn-filled"
+      replace={false}
+      to="/create"
+    >
+      Write
+    </Link>
+    <Link
+      className="btn btn-transparent"
+      id="myDiary"
+      replace={false}
+      to="/entries"
+    >
+      my Diary
+    </Link>
+  </div>
+</header>
+`;
