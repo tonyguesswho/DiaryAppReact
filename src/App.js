@@ -9,7 +9,8 @@ import Entries from './containers/Entries';
 import NewEntry from './containers/NewEntry';
 import Entry from './containers/Entry';
 import EditEntry from './containers/EditEntry';
-import './index.scss';
+import './styles/index.scss';
+import './styles/media.scss';
 
 class App extends React.Component {
   render() {
