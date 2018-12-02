@@ -46,31 +46,34 @@ class Entries extends Component {
             </ul>
           </nav>
         </header>
-        <section className="entries">
-          <h2 id="ent" />
-          <div>
-            {loading ? (
-              <div>loading ...</div>
+        {loading ? (
+          <div>loading ...</div>
+        ) : (
+          <section className="entries">
+            {Object.values(entries).length === 0 ? (
+              <h2 id="ent"><p>No diary entry : <Link to="/create">Write</Link></p></h2>
             ) : (
-              <div className="bigbox" id="allEntries">
-                {Object.values(entries).map(entry => (
-                  <div className="box card span41" id="anEntry" key={entry.id}>
-                    <h4>{entry.title}</h4>
-                    <Link to={`/entry/${entry.id}`} className="ebtn ebtn-filled">
-                      View
-                    </Link>
-                    <Link to={`/editentry/${entry.id}`}  className="ebtn ebtn-transparent">
-                      Edit
-                    </Link>
-                    <div className="entry-date">
-                      <p>{moment(`${entry.created_at}`).format('MMMM Do YYYY')}</p>
+              <div>
+                <div className="bigbox" id="allEntries">
+                  {Object.values(entries).map(entry => (
+                    <div className="box card span41" id="anEntry" key={entry.id}>
+                      <h4>{entry.title}</h4>
+                      <Link to={`/entry/${entry.id}`} className="ebtn ebtn-filled">
+                        View
+                      </Link>
+                      <Link to={`/editentry/${entry.id}`} className="ebtn ebtn-transparent">
+                        Edit
+                      </Link>
+                      <div className="entry-date">
+                        <p>{moment(`${entry.created_at}`).format('MMMM Do YYYY')}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             )}
-          </div>
-        </section>
+          </section>
+        )}
       </div>
     );
   }
