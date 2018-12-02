@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Edit entry UI render features container should render as expected 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "key": "testKey",
+      },
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "testKey",
+          "pathname": "/",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <_default>
+      <Provider
+        store={
+          Object {
+            "dispatch": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+            Symbol(observable): [Function],
+          }
+        }
+      >
+        <Connect(withRouter(EditEntry))>
+          <withRouter(EditEntry)
+            clearError={[Function]}
+            editEntry={[Function]}
+            entry={Object {}}
+            errorMessage=""
+            getEntry={[Function]}
+          >
+            <Route>
+              <EditEntry
+                clearError={[Function]}
+                editEntry={[Function]}
+                entry={Object {}}
+                errorMessage=""
+                getEntry={[Function]}
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "canGo": [Function],
+                    "createHref": [Function],
+                    "entries": Array [
+                      Object {
+                        "hash": "",
+                        "key": "testKey",
+                        "pathname": "/",
+                        "search": "",
+                      },
+                    ],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "index": 0,
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "key": "testKey",
+                      "pathname": "/",
+                      "search": "",
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                location={
+                  Object {
+                    "hash": "",
+                    "key": "testKey",
+                    "pathname": "/",
+                    "search": "",
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+              >
+                <div
+                  className="bg body"
+                >
+                  <header
+                    className="header2"
+                  >
+                    <nav>
+                      <ul
+                        className="nav nav2"
+                      >
+                        <li>
+                          <Link
+                            replace={false}
+                            to="/"
+                          >
+                            <a
+                              href="/"
+                              onClick={[Function]}
+                            >
+                              Home
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            replace={false}
+                            to="/profile"
+                          >
+                            <a
+                              href="/profile"
+                              onClick={[Function]}
+                            >
+                              Profile
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            id="logout"
+                            onClick={[Function]}
+                            replace={false}
+                            to="/"
+                          >
+                            <a
+                              href="/"
+                              id="logout"
+                              onClick={[Function]}
+                            >
+                              Sign Out
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </nav>
+                  </header>
+                  <section
+                    className="signup"
+                    id="messageBox"
+                  >
+                    <div
+                      className="box span31 span3-center card"
+                    >
+                      <h2>
+                        Edit Diary Entry 
+                      </h2>
+                      <form
+                        id="addEntry"
+                        onSubmit={[Function]}
+                      >
+                        <div
+                          className="fullspan"
+                        >
+                          <label
+                            htmlFor="title"
+                          >
+                            Title:
+                          </label>
+                        </div>
+                        <div
+                          className="fullspan"
+                        >
+                          <input
+                            id="title"
+                            name="title"
+                            onChange={[Function]}
+                            placeholder="Entry title"
+                            required={true}
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                        <div
+                          className="fullspan"
+                        >
+                          <label
+                            htmlFor="textarea"
+                          >
+                            Express Yourself:
+                          </label>
+                        </div>
+                        <div
+                          className="fullspan"
+                        >
+                          <textarea
+                            id="textarea"
+                            name="textarea"
+                            onChange={[Function]}
+                            required={true}
+                            rows="10"
+                            value=""
+                          />
+                        </div>
+                        <input
+                          type="submit"
+                          value="Edit Entry"
+                        />
+                      </form>
+                    </div>
+                  </section>
+                </div>
+              </EditEntry>
+            </Route>
+          </withRouter(EditEntry)>
+        </Connect(withRouter(EditEntry))>
+      </Provider>
+    </_default>
+  </Router>
+</MemoryRouter>
+`;

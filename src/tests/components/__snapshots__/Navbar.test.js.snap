@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavbarUI render features component should render as expected 1`] = `
+<nav>
+  <ul
+    className="nav main-nav"
+    id="authNav"
+  >
+    <li>
+      <Link
+        replace={false}
+        to="/signin"
+      >
+        Sign In
+      </Link>
+    </li>
+    <li>
+      <Link
+        replace={false}
+        to="/signup"
+      >
+        Sign Up
+      </Link>
+    </li>
+  </ul>
+</nav>
+`;
