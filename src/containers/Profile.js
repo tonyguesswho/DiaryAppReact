@@ -17,7 +17,7 @@ class Profile extends Component {
     const { profile } = this.props;
     this.setState({
       profile
-    })
+    });
   };
   render() {
     const { profile } = this.state;
@@ -40,16 +40,14 @@ class Profile extends Component {
         <section className="profile">
           <div className="bigbox">
             <div className="box card span21 span2-center">
-              <h2 id="username">{profile.username}</h2>
-              <h4>Total Number of Entries</h4>
-              <p id="totalEntry" />
+              <h2 id="username">Welcome {profile.username}</h2>
 
-              <a href="add_entry.html" className="ebtn ebtn-filled">
+              <Link to="/create" className="ebtn ebtn-filled">
                 Add Entry
-              </a>
-              <a href="entries.html" className="ebtn ebtn-transparent">
+              </Link>
+              <Link to="/entries" className="ebtn ebtn-transparent">
                 My Diary
-              </a>
+              </Link>
             </div>
           </div>
         </section>

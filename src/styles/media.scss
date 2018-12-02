@@ -1,0 +1,167 @@
+@media only screen and (max-width: 1200px) {
+  .home-text {
+    width: 100%;
+    margin: 3px auto 3px auto;
+    text-align: center;
+  }
+  .home-text h1 {
+    font-size: 200%;
+    margin-bottom: 30px;
+  }
+  .bigbox {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .home-text {
+    width: 100%;
+    margin: 3px auto 3px auto;
+    text-align: center;
+    font-size: 19px;
+  }
+  .home-text h1 {
+    font-size: 200%;
+    margin-bottom: 30px;
+  }
+  .span41 {
+    width: 49.2%;
+  }
+
+  .span31,
+  .span32,
+  .span42,
+  .span43 {
+    width: 50%;
+  }
+  .span21 {
+    width: 60%;
+  }
+  .span2-center {
+    margin-left: 20%;
+  }
+  .bigbox {
+    width: 100%;
+  }
+
+  .span3-center {
+    margin-left: 24%;
+  }
+  .ebtn:link,
+  .ebtn:visited {
+    padding: 5px 5px;
+    display: block;
+    width: 80%;
+    margin: 5px auto 25px auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .home-text {
+    width: 100%;
+    margin: 3px auto 3px auto;
+    text-align: center;
+    font-size: 16px;
+  }
+  .home-text h1 {
+    font-size: 200%;
+    margin-bottom: 30px;
+  }
+  .span41 {
+    width: 49.2%;
+  }
+  .span21,
+  .span31,
+  .span32,
+  .span42,
+  .span43 {
+    width: 70%;
+  }
+  .bigbox {
+    width: 100%;
+  }
+
+  .span3-center {
+    margin-left: 16%;
+  }
+  .span2-center {
+    margin-left: 15%;
+  }
+  .ebtn:link,
+  .ebtn:visited {
+    padding: 5px 5px;
+    display: block;
+    width: 80%;
+    margin: 5px auto 25px auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .logo {
+    width: auto;
+    height: 100px;
+    margin: 5px auto 2px auto;
+    float: none;
+  }
+
+  .nav {
+    float: none;
+    width: 100%;
+    font-size: 18px;
+    margin: 2px auto 0 auto;
+  }
+
+  #main-header {
+    text-align: center;
+  }
+  .header2 {
+    text-align: center;
+    height: 50px;
+  }
+  .nav2 {
+    padding-top: 15px;
+  }
+
+  .home-text {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .home-text h1 {
+    font-weight: 200;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin: 35px 1px 3px 1px;
+  }
+  .btn:link,
+  .btn:visited {
+    padding: 10px 30px;
+    display: block;
+    width: 80%;
+    margin: 5px auto 25px auto;
+  }
+  .ebtn:link,
+  .ebtn:visited {
+    padding: 5px 5px;
+    display: block;
+    width: 80%;
+    margin: 5px auto 25px auto;
+  }
+  .span21,
+  .span31,
+  .span32,
+  .span41,
+  .span42,
+  .span43 {
+    width: 100%;
+  }
+  .bigbox {
+    width: 100%;
+  }
+  .span3-center {
+    margin: 3px auto 3px auto;
+  }
+  .span2-center {
+    margin: 3px auto 3px auto;
+  }
+}
