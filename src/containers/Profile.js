@@ -40,9 +40,7 @@ class Profile extends Component {
         <section className="profile">
           <div className="bigbox">
             <div className="box card span21 span2-center">
-              <h2 id="username">{profile.username}</h2>
-              <h4>Total Number of Entries</h4>
-              <p id="totalEntry" />
+              <h2 id="username">Welcome {profile.username}</h2>
 
               <Link to="/create" className="ebtn ebtn-filled">
                 Add Entry

@@ -4,7 +4,8 @@ const initialState = {
   authSuccess: '',
   userProfile:{},
   entries:[],
-  entryError:''
+  entryError:'',
+  entry:{}
 };
 
 export default initialState;

@@ -56,10 +56,10 @@ class Entries extends Component {
                 {Object.values(entries).map(entry => (
                   <div className="box card span41" id="anEntry" key={entry.id}>
                     <h4>{entry.title}</h4>
-                    <Link to="/entry" className="ebtn ebtn-filled">
+                    <Link to={`/entry/${entry.id}`} className="ebtn ebtn-filled">
                       View
                     </Link>
-                    <Link to="/editentry" className="ebtn ebtn-transparent">
+                    <Link to={`/editentry/${entry.id}`}  className="ebtn ebtn-transparent">
                       Edit
                     </Link>
                     <div className="entry-date">

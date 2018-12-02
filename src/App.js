@@ -7,6 +7,8 @@ import Profile from './containers/Profile';
 import authenticate from './hoc/authenticate';
 import Entries from './containers/Entries';
 import NewEntry from './containers/NewEntry';
+import Entry from './containers/Entry';
+import EditEntry from './containers/EditEntry';
 import './index.scss';
 
 class App extends React.Component {
@@ -20,6 +22,8 @@ class App extends React.Component {
           <Route exact path="/entries" component={authenticate(Entries)}/>
           <Route exact path="/profile" component={authenticate(Profile)}/>
           <Route exact path="/create" component={authenticate(NewEntry)}/>
+          <Route exact path="/entry/:id" component={authenticate(Entry)}/>
+          <Route exact path="/editentry/:id" component={authenticate(EditEntry)}/>
         </div>
       </BrowserRouter>
     );

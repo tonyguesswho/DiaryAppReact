@@ -12,7 +12,7 @@ class Landing extends Component {
         <Navbar />
         <div className="home-text">
           <h1>Personalized Digital Diary</h1>
-          <Link to="/addentry" className="btn btn-filled">
+          <Link to="/create" className="btn btn-filled">
             Write
           </Link>
           <Link to="/entries" className="btn btn-transparent" id="myDiary">
