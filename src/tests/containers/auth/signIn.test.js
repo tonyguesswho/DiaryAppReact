@@ -1,19 +1,32 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import toJson from 'enzyme-to-json';
-import SignIn from '../../../containers/auth/SignIn';
+import SigninComponent, { SignIn } from '../../../containers/auth/SignIn';
 import Root from '../../../root';
 
 let wrapped;
+let wrapper;
+
+const props = {
+  clearError: jest.fn()
+}
 
 beforeEach(() => {
   wrapped = mount(
     <MemoryRouter initialEntries={[{ key: 'testKey' }]}>
       <Root>
-        <SignIn />
+        <SigninComponent
+          clearError={props.clearError}
+        />
       </Root>
     </MemoryRouter>
+  );
+
+  wrapper = shallow(
+    <SignIn
+      clearError={props.clearError}
+    />
   );
 });
 
@@ -28,6 +41,30 @@ describe('Signup UI', () => {
 
     it('has 3 input fields and a button', () => {
       expect(wrapped.find('input').length).toEqual(3);
+    });
+
+    it('should simulate signin process', () => {
+      const Signin = wrapper.find('form');
+
+      const mockedEvent = {
+        preventDefault: jest.fn()
+      }
+
+      Signin.simulate('submit', mockedEvent)
+    });
+
+    it('should simulate onChange validation process', () => {
+      const Signin = wrapper.find('#password');
+
+      const mockedEvent = {
+        preventDefault: jest.fn(),
+        target: {
+          name: 'name',
+          value: 'value'
+        }
+      }
+
+      Signin.simulate('change', mockedEvent)
     });
   });
 });

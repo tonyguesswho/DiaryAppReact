@@ -6,4 +6,3 @@ export const SET_USER_PROFILE  = 'SET_USER_PROFILE';
 export const GET_ENTRIES ='GET_ENTRIES' ;
 export const CREATE_ENTRY_ERROR='CREATE_ENTRY_ERROR';
 export const GET_ENTRY='GET_ENTRY';
-

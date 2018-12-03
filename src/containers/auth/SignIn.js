@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { signin, clearError } from '../../actions/authAction';
 
-class SignIn extends Component {
+export class SignIn extends Component {
   constructor() {
     super();
     this.state = {
@@ -85,7 +85,7 @@ class SignIn extends Component {
                   Don't have an account
                   <Link to="/signup">Sign Up</Link>
                 </p>
-                {!loading ? <input type="submit" value="Sign In" /> : <input type="submit" value="Loading  . . ." disabled="disabled" />}
+                {!loading ? <input id="signin" type="submit" value="Sign In" /> : <input type="submit" value="Loading  . . ." disabled="disabled" />}
               </form>
             </div>
           </div>
