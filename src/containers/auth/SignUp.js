@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import { signup, clearError } from '../../actions/authAction';
 
 const fieldNames = ['username', 'email', 'password', 'confirmPassword'];
-class SignUp extends Component {
+export class SignUp extends Component {
   constructor() {
     super();
     this.state = {

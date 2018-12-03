@@ -54,7 +54,22 @@ exports[`Signup UI render features container should render as expected 1`] = `
           }
         }
       >
-        <Connect(withRouter(SignUp))>
+        <Connect(withRouter(SignUp))
+          clearError={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          signup={[MockFunction]}
+        >
           <withRouter(SignUp)
             clearError={[Function]}
             errorMessage=""
