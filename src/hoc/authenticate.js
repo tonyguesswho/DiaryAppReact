@@ -12,8 +12,8 @@ export default (ChildComponent) => {
     }
 
     checkAuthStatus() {
-      const { profile, history } = this.props;
-      if (Object.keys(profile).length === 0 ) {
+      const { history } = this.props;
+      if (!localStorage.token) {
         history.push('/signin');
       }
     }
